@@ -14,8 +14,9 @@ class TruncateWords
      */
     public static function truncateWords(string $text, int $max, string $tail  = '…'): string
     {
-        $len = strlen($text);
-        $text = preg_match("/^.{1,$max}\b/su", $text, $match) ? $match[0] : mb_substr($text, 0, $max);
-        return trim($text) . ($len > strlen($text) ? $tail  : '');
+        return trim(preg_match("/^.{1,$max}\b/su", $text, $match) 
+        ? $match[0] 
+        : mb_substr($text, 0, $max)) 
+        . (strlen($text) > $max ? $tail  : '');
     }
 }
