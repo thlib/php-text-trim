@@ -1,7 +1,7 @@
 {
-    "name": "thlib/php-text-trim",
+    "name": "thlib/php-truncate-words",
     "version": "1.0.0",
-    "description": "Trim text.",
+    "description": "Unicode truncate words after a certain number of characters.",
     "license": "Unlicense",
     "authors": [
         {
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "TH\\TextTrim\\": "src/"
+            "TH\\TruncateWords\\": "src/"
         }
     },
     "require-dev": {
