@@ -12,7 +12,10 @@ self::assertSame('When the world wants to talk, it speaks…', $txt);
 The code
 
 ```php
-return trim(preg_match("/^.{1,$max}\b/su", $text, $match) ? $match[0] : mb_substr($text, 0, $max)) . (strlen($text) > $max ? $tail  : '');
+$text = trim(preg_match("/^.{1,$max}\b/su", $text, $match) 
+? $match[0] 
+: mb_substr($text, 0, $max)) 
+. (strlen($text) > $max ? $tail  : '');
 ```
 
 To run tests
