@@ -1,5 +1,6 @@
 # php-truncate-words
 Unicode truncate words after a certain number of characters in any language.
+
 Based on the answer: [https://stackoverflow.com/a/32340759/175071](https://stackoverflow.com/a/32340759/175071)
 
 ```php
