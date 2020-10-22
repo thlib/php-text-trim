@@ -12,10 +12,10 @@ class TruncateWords
      * @param string $tail
      * @return string
      */
-    public static function truncateWords(string $text, int $max, string $tail  = ''): string
+    public static function truncateWords(string $text, int $max, string $tail  = '…'): string
     {
         $len = strlen($text);
         $text = preg_match("/^.{1,$max}\b/su", $text, $match) ? $match[0] : mb_substr($text, 0, $max);
-        return trim($len > strlen($text) ? $text . $tail : $text);
+        return trim($text) . ($len > strlen($text) ? $tail  : '');
     }
 }
